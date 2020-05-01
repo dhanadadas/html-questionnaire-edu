@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> <link rel="icon" href="/favicon.ico" type="image/x-icon">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+$(function(){
+        $('#element_21').change(function(){
+		var value = $('#element_21 option:selected').text();
+        document.getElementById('element_1').value = value;
+
+    })
+});
+</script>
+	<title>Независимая оценка качества условий оказания услуг организациями образованияи</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Untitled Form</title>
+<link rel="stylesheet" type="text/css" href="view.css" media="all">
+<script type="text/javascript" src="view.js"></script>
+<style>
+        body {font-family:Verdana; font-size:12px;}
+    </style>
+    <script type="text/javascript">
+    // <![CDATA[
+        function loadCity(select)
+        {
+            var citySelect = $('select[name="entry.989816706"]');
+            citySelect.attr('disabled', 'disabled'); // делаем список городов не активным
+            
+            // послыаем AJAX запрос, который вернёт список городов для выбранной области
+            $.getJSON('index.php', {action:'getCity', region:select.value}, function(cityList){
+                
+                citySelect.html(''); // очищаем список городов
+                
+                // заполняем список городов новыми пришедшими данными
+                $.each(cityList, function(i){
+                    citySelect.append('<option value="' + i + '">' + this + '</option>');
+                });
+                
+                citySelect.removeAttr('disabled'); // делаем список городов активным
+                
+            });
+        }
+    // ]]>
+    </script>
+</head>
+
+	
+<body id="main_body" >
+	<img id="top" src="top.png" alt="">
+	<div id="form_container">
+	
+		<h1><a>
+Результат опроса</a></h1>
+	
+<script type="text/javascript">var submitted=false;</script>
+<iframe name="hidden_iframe" id="hidden_iframe"
+style="display:none;" onload="if(submitted)
+{window.location='http://opros.rane-brf.ru/5/spasibo.html';}"></iframe>
+<form action="https://docs.google.com/forms/d/e/1FAIpQLSefn7AALGIuvKyxg8pOihLQZhr5UA7oBD_2F3K12ELQNDbnIA/formResponse" method="POST" id="mG61Hd"
+target="hidden_iframe" onsubmit="submitted=true;">
+		
+					<div class="form_description">
+			<h2>
+ДАННЫЕ ОТПРАВЛЕНЫ! СПАСИБО ЗА УЧАСТИЕ!</h2>
+	
+		</div>						
+			
+		</form>	
+		<div id="footer">
+			(с) 2018 год
+		</div>
+	</div>
+	<img id="bottom" src="bottom.png" alt="">
+	</body>
+	
+</html>
